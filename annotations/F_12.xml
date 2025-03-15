@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>F_12.jpg</filename>
+	<path>G:\Mahdiah\University\8 Semester\Computer Vision\Project\CV Project Dataset\CV Project (Group 5)\images\F_12.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Block F</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>162</xmin>
+			<ymin>1050</ymin>
+			<xmax>3972</xmax>
+			<ymax>2892</ymax>
+		</bndbox>
+	</object>
+</annotation>

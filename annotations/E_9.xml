@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>E_9.jpg</filename>
+	<path>G:\Mahdiah\University\8 Semester\Computer Vision\Project\CV Project Dataset\CV Project (Group 5)\images\E_9.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3024</width>
+		<height>4032</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Block E</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>22</xmin>
+			<ymin>442</ymin>
+			<xmax>3023</xmax>
+			<ymax>4032</ymax>
+		</bndbox>
+	</object>
+</annotation>

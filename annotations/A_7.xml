@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>A_7.jpg</filename>
+	<path>G:\Mahdiah\University\8 Semester\Computer Vision\Project\CV Project Dataset\CV Project (Group 5)\images\A_7.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3412</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Block A</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>326</xmin>
+			<ymin>212</ymin>
+			<xmax>3412</xmax>
+			<ymax>3024</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>B_18.JPG</filename>
+	<path>G:\Mahdiah\University\8 Semester\Computer Vision\Project\CV Project Dataset\CV Project (Group 5)\images\B_18.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Block B</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>382</xmin>
+			<ymin>737</ymin>
+			<xmax>4031</xmax>
+			<ymax>2770</ymax>
+		</bndbox>
+	</object>
+</annotation>
