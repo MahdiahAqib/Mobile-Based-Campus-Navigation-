@@ -1,0 +1,34 @@
+Dataset Description:
+
+Total Images Collected: 101 images
+
+List of Buildings Covered:
+* Block A
+* Block B
+* Block C
+* Block D
+* Block E
+* Block F
+
+Description of Annotation Format:
+The dataset annotations were generated using LabelImg. The annotations are stored in a structured CSV file (annotations.csv inside the annotations/ folder) with the following format:
+
+Column Name                Description
+------------------------------------------------------------
+filename                   The name of the image file (e.g., A_1.JPG)
+label                      The corresponding building name (e.g., Block A)
+xmin, ymin, xmax, ymax     The bounding box coordinates marking the region of interest for the building
+width, height              The resolution of the image
+
+Each row in annotations.csv represents a labeled image with the bounding box coordinates outlining the primary building in the image. 
+
+Challenges Faced:
+1. Crowded Campus:
+   * During the first round of image collection, there were numerous students present on campus, leading to people being visible in almost every image.
+   * To minimize this issue and ensure a clean dataset, we rescheduled and took photos on a Saturday again, when fewer people were present.
+2. Limited Space for Capturing Buildings:
+   * Many buildings were too tall to be fully captured when standing close, resulting in poor framing and distorted angles.
+   * However, moving farther back was often not an option due to physical barriers like boundary walls or other buildings obstructing the view. In some cases, moving back introduced additional obstacles like trees or poles into the frame, affecting the visibility of the building.
+3. Lighting and Shadow Issues:
+   * Some buildings were positioned in a way that their sides were directly facing the sun, causing harsh lighting, extreme contrast, or deep shadows.
+   * Shadows made it difficult to capture clear details, requiring adjustments in camera angles and timings to achieve better lighting conditions.
