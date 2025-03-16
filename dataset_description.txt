@@ -18,7 +18,7 @@ Column Name                Description
 filename                   The name of the image file (e.g., A_1.JPG)
 label                      The corresponding building name (e.g., Block A)
 xmin, ymin, xmax, ymax     The bounding box coordinates marking the region of interest for the building
-width, height              The resolution of the image
+width, height              The resolution of the image (dimensions of the image in pixels)
 
 Each row in annotations.csv represents a labeled image with the bounding box coordinates outlining the primary building in the image. 
 
