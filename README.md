@@ -1,0 +1,92 @@
+# Model Usage Guide
+
+This guide explains how to load and use the model that was trained using the Campus Landmarks dataset for building classification.
+
+## Requirements
+
+Make sure the following dependencies are installed:
+- PyTorch (with torchvision)
+- Pillow
+
+You can install them using `pip`:
+
+```bash
+pip install torch torchvision pillow
+```
+
+## Steps to Run the Model
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/MahdiahAqib/Mobile-Based-Campus-Navigation-.git
+```
+
+### 2. Load the Trained Model and Weights
+
+The model was saved during training as `model.pth`. To load the model:
+
+```python
+import torch
+from torchvision import models
+import torchvision.transforms as transforms
+from PIL import Image
+
+# Define the model structure
+model = models.mobilenet_v2(weights=models.MobileNet_V2_Weights.DEFAULT)
+num_classes = 6
+model.classifier[1] = torch.nn.Linear(model.classifier[1].in_features, num_classes)
+
+# Load the trained model weights
+model.load_state_dict(torch.load("model.pth", weights_only=True))
+```
+
+### 3. Using the loaded model for inference
+```python
+model.eval()  # Set the model to evaluation mode
+
+# Move model to device (if using GPU)
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+model.to(device)
+
+def apply_transformations(image_path):
+    img = Image.open(image_path).convert("RGB")
+
+    transform = transforms.Compose([
+        transforms.Resize((224, 224)),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+    ])
+
+    img = transform(img)
+    return img.unsqueeze(0)  
+
+def predict_building(image):
+    processed_image = apply_transformations(image)
+
+    with torch.no_grad():
+        output = model(processed_image.to(device))
+        predicted_class = torch.argmax(output, dim=1).item()
+    
+    predicted_label = label_mapping.get(predicted_class, "Unknown")
+    print(f"Predicted Building: {predicted_label}")
+
+label_mapping = {
+    0: "Block A",
+    1: "Block B",
+    2: "Block C",
+    3: "Block D",
+    4: "Block E",
+    5: "Block F", 
+}
+
+# Test your image
+img_path = 'path_to_image.jpg' # Replace with your image path
+
+predict_building(img_path)
+```
+- Ensure that the model and input image are on the same device (GPU/CPU).
+- If you're using a GPU, make sure you have CUDA installed and `torch.cuda.is_available()` is `True`.
+
+### 4. Interpreting the Output
+The predicted output will be the block/building the image represents.
