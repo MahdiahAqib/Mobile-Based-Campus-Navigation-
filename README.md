@@ -90,3 +90,24 @@ predict_building(img_path)
 
 ### 4. Interpreting the Output
 The predicted output will be the block/building the image represents.
+
+# Distance Estimation module (Phase-3)
+## Objective
+Estimate the distance from the user’s position to a detected landmark by analyzing two images captured from different horizontal positions (left and right views), using visual cues and mathematical models
+## Requirements
+- Python 3 (Automatically available in Google Colab)
+- Torch and Torchvision
+- OpenCV
+- YOLOv5 (via torch.hub)
+- Google Colab for GUI and file uploads
+## Input Format
+- Upload exactly 2 images of the same landmark taken from slightly different positions.
+- Baseline Distance: 1 meter between the two camera positions (known and fixed).
+- Images should be taken at the same height and orientation as much as possible.
+## Outputs
+The matched object is displayed in both left and right images with:
+- Green bounding box
+- Red center dot
+- Label name
+
+Estimated distance is printed in meters
