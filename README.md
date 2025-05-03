@@ -111,3 +111,26 @@ The matched object is displayed in both left and right images with:
 - Label name
 
 Estimated distance is printed in meters
+
+# 📱 Phase 4 - Mobile App
+
+Access the mobile app repository here: [Campus Navigator Mobile App](https://github.com/RaabiaBaig/Campus-Navigator-Mobile-App)
+
+### How to Run the Mobile App
+
+1. Clone or download the **Campus-Navigator-Mobile-App** repository.
+2. Open the project folder and follow these steps:
+   
+   - Open **two terminals**:
+     - **Terminal 1**:
+       ```bash
+       cd backend
+       python app.py
+       ```
+     - **Terminal 2** (from project root):
+       ```bash
+       npx expo start
+       ```
+
+3. Install the **Expo Go** app on your phone.
+4. Scan the QR code shown in the terminal to run the app on your device.
