@@ -98,7 +98,7 @@ Estimate the distance from the user’s position to a detected landmark by analy
 - Python 3 (Automatically available in Google Colab)
 - Torch and Torchvision
 - OpenCV
-- YOLOv5 (via torch.hub)
+- RoboFlow API (via inference_sdk)
 - Google Colab for GUI and file uploads
 ## Input Format
 - Upload exactly 2 images of the same landmark taken from slightly different positions.
